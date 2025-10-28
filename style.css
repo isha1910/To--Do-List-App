@@ -1,0 +1,162 @@
+
+
+/* Reset & base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #8EC5FC 0%, #E0C3FC 100%);
+    color: #333;
+}
+
+/* Panel Styling */
+.panel {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    padding: 30px 20px;
+}
+
+/* Panel hover for subtle lift */
+.panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+/* Heading */
+.panel h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #6C63FF;
+    letter-spacing: 1px;
+}
+
+/* Content area */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input styling */
+input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    outline: none;
+    font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s;
+    background: #f9f9f9;
+}
+
+input[type="text"]:focus {
+    border-color: #6C63FF;
+    box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+}
+
+/* Button styling */
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6C63FF, #FF6584);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(108, 99, 255, 0.4);
+}
+
+/* Task list */
+ul {
+    list-style: none;
+    margin-top: 15px;
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Individual task */
+li {
+    background: #F3F3F3;
+    border-radius: 12px;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 500;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+li:hover {
+    transform: translateX(3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Delete button inside li */
+li button {
+    background: #FF4D4F;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    transition: background 0.3s, transform 0.3s;
+}
+
+li button:hover {
+    background: #D9363E;
+    transform: scale(1.1);
+}
+
+/* Scrollbar styling */
+ul::-webkit-scrollbar {
+    width: 6px;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background: #6C63FF;
+    border-radius: 10px;
+}
+
+ul::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Responsive tweaks */
+@media (max-width: 500px) {
+    .panel {
+        padding: 25px 15px;
+    }
+
+    input[type="text"] {
+        font-size: 0.95rem;
+    }
+
+    button {
+        font-size: 0.95rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
